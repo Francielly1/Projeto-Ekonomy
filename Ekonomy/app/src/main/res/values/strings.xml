@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ekonomy</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_cadastro_ganho">CadastroGanhoActivity</string>
+    <string name="title_activity_cadastro_gasto">CadastroGastoActivity</string>
+    <string name="title_activity_cadastro_gast">CadastroGastActivity</string>
+    <string name="title_activity_visualizar">VisualizarActivity</string>
+    <string name="title_activity_visualizar_gastos">VisualizarGastosActivity</string>
+    <string name="title_activity_detalhes_ganho">DetalhesGanhoActivity</string>
+    <string name="title_activity_detalhes_gasto">DetalhesGastoActivity</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="marginAddRight">6dp</dimen>
+    <dimen name="marginAddBottom">6dp</dimen>
+</resources>

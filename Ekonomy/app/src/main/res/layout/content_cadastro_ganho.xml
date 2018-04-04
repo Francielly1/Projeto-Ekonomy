@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.senaijandira.ekonomy.CadastroGanhoActivity"
+    tools:showIn="@layout/activity_cadastro_ganho"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria:"
+        android:textSize="20dp"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/grupo_radio"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salário"
+            android:textSize="15dp"
+            android:id="@+id/rdo_salario"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poupança"
+            android:textSize="15dp"
+            android:id="@+id/rdo_poupanca"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Investimento"
+            android:textSize="15dp"
+            android:id="@+id/rdo_investimento"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Ganho:"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="R$"
+        android:id="@+id/txt_cadastro_valorganho"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição:"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_cadastro_descricao"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data:"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_cadastro_data"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CADASTRAR"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btn_cadastrar_ganho"
+        android:onClick="cadastrarGanho"
+        />
+
+
+
+</LinearLayout>

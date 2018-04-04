@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.senaijandira.ekonomy.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <!--Área saldo disponível-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            android:background="@color/colorBackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="40dp"
+                android:text="R$ 0.000,00"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:id="@+id/txt_saldo_disponivel"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Saldo disponível"
+                android:textSize="18dp"
+                />
+        </LinearLayout>
+
+        <!--Área mês atual-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/borda_redonda"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="170dp"
+                android:text="Mês"
+                android:paddingTop="6dp"
+                android:textSize="17dp"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"></Spinner>
+        </LinearLayout>
+
+
+        <!--Area Ganhos mês atual-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/borda_redonda"
+            android:orientation="vertical"
+            android:onClick="abrirVisualizarGanhos"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Ganhos"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <!--Subtitulos-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="Ganhos"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="Saldo"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <!--Valores-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/txt_ganhos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:text="R$0.00,00"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorValoresVerde"
+                    android:textSize="18dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_ganhos_disponivel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:text="R$0.00,00"
+                    android:textColor="@color/colorValoresVerde"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/olho"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!--Área visao geral de ganhos-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/borda_redonda"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Visão geral Ganhos"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <!--Categoria e Valor-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="Salário"
+                    android:textSize="18dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="R$ 0.00,00"
+                    android:id="@+id/txt_salario"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
+            <!--Categoria e Valor-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="9dp"
+                    android:text="Poupança"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="R$ 0.00,00"
+                    android:id="@+id/txt_poupanca"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
+            <!--Categoria e Valor-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="9dp"
+                    android:text="Investimento"
+                    android:textSize="18dp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="R$ 0.00,00"
+                    android:id="@+id/txt_investimento"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--Area Gastos mês atual-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:background="@drawable/borda_redonda"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:onClick="abrirVisualizarGastos"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gastos"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+
+                android:paddingTop="10dp"
+                android:textSize="25dp"
+                />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               >
+                <!--Valor-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="R$0.00,00"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="2dp"
+                    android:textColor="@color/colorValoresAmarelo"
+                    android:id="@+id/txt_gastos"
+                    android:textSize="18dp"
+                    android:paddingLeft="25dp"
+
+                    />
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/olho"
+                   android:layout_gravity="end"
+
+                   />
+
+           </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--Área visão gastos mês atual-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/borda_redonda"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Visão geral Gastos"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <!--Categoria e Valor-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="Lazer"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_lazer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 0.00,00"
+                    android:textColor="@color/colorValoresAmarelo"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
+            <!--Categoria e Valor-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Transporte"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 0.00,00"
+                    android:textColor="@color/colorValoresAmarelo"
+                    android:id="@+id/txt_transporte"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
+            <!--Categoria e Valor-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Saúde"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 0.00,00"
+                    android:textColor="@color/colorValoresAmarelo"
+                    android:id="@+id/txt_saude"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
+            <!--Categoria e Valor-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Moradia"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="R$ 0.00,00"
+                    android:textColor="@color/colorValoresAmarelo"
+                    android:id="@+id/txt_moradia"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD GASTO"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btn_add_gasto"
+                android:layout_marginLeft="100dp"
+                android:onClick="abrirAdicionarGasto"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD GANHO"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btn_add_ganho"
+                android:onClick="abrirAdicionarGanho"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
